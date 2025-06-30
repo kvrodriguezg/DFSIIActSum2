@@ -78,6 +78,6 @@ export class ResetPasswordComponent {
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
     alert('Contraseña actualizada exitosamente');
-    this.router.navigate(['/']);
+    this.router.navigate(['/login']);
   }
 }
