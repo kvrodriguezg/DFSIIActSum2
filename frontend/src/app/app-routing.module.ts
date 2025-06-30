@@ -7,10 +7,8 @@ import { ResetPasswordComponent } from './auth/reset-password/reset-password.com
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
-import { CategoriaDesayunosComponent } from './pages/categoria-desayunos/categoria-desayunos.component';
-import { CategoriaAlmuerzosComponent } from './pages/categoria-almuerzos/categoria-almuerzos.component';
-import { CategoriaVeganasComponent } from './pages/categoria-veganas/categoria-veganas.component';
-import { CategoriaPostresComponent } from './pages/categoria-postres/categoria-postres.component';
+import { CategoriaComponent } from './pages/categoria/categoria.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -19,11 +17,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'favorites', component: FavoritesComponent },
-  { path: '**', redirectTo: '' },
-  { path: 'categoria-desayunos', component: CategoriaDesayunosComponent },
-  { path: 'categoria-almuerzos', component: CategoriaAlmuerzosComponent },
-  { path: 'categoria-veganas', component: CategoriaVeganasComponent },
-  { path: 'categoria-postres', component: CategoriaPostresComponent }
+  { path: 'categoria/:tipo', component: CategoriaComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

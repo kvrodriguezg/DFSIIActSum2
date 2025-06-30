@@ -5,27 +5,27 @@
            class="d-inline-block align-text-top me-2" />
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/']">Inicio</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown"
-             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorías
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-            <li><a class="dropdown-item" [routerLink]="['/categoria-desayunos']">Desayunos</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/categoria-almuerzos']">Almuerzos</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/categoria-veganas']">Veganas</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/categoria-postres']">Postres</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/categoria/desayunos']">Desayunos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/categoria/almuerzos']">Almuerzos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/categoria/veganas']">Veganas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/categoria/postres']">Postres</a>
         </li>
       </ul>
 
