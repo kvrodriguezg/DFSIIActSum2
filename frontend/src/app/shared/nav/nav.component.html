@@ -1,51 +1,52 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" routerLink="/">
-      <img src="assets/img/logo_nav.png" alt="Logo" width="40" height="40" class="me-2">
+    <a class="navbar-brand d-flex align-items-center" [routerLink]="['/']">
+      <img src="assets/img/logo_nav.png" alt="Logo" width="40" height="40"
+           class="d-inline-block align-text-top me-2" />
     </a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
-    <div class="collapse navbar-collapse" id="navbarNav">
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active">Inicio</a>
+          <a class="nav-link" [routerLink]="['/']">Inicio</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" 
-             data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown"
+             role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorías
           </a>
           <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-            <li><a class="dropdown-item" routerLink="/category/desayunos">Desayunos</a></li>
-            <li><a class="dropdown-item" routerLink="/category/almuerzos">Almuerzos</a></li>
-            <li><a class="dropdown-item" routerLink="/category/veganas">Veganas</a></li>
-            <li><a class="dropdown-item" routerLink="/category/postres">Postres</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/categoria-desayunos']">Desayunos</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/categoria-almuerzos']">Almuerzos</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/categoria-veganas']">Veganas</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/categoria-postres']">Postres</a></li>
           </ul>
         </li>
       </ul>
-      
-      <ul class="navbar-nav">
-        <ng-container *ngIf="authService.isLoggedIn(); else notLoggedIn">
+
+      <ul class="navbar-nav ms-auto">
+        <ng-container *ngIf="sesion?.logueado; else sinSesion">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/profile">Mi Perfil</a>
+            <a class="nav-link" [routerLink]="['/mi-perfil']">Mi Perfil</a>
           </li>
-          <li *ngIf="authService.isAdmin()" class="nav-item">
-            <a class="nav-link" routerLink="/admin">Panel Admin</a>
+          <li *ngIf="esAdmin" class="nav-item">
+            <a class="nav-link" [routerLink]="['/panel-admin']">Panel Admin</a>
+          </li>
+          <li *ngIf="esNormal" class="nav-item">
+            <a class="nav-link" [routerLink]="['/favoritos']">Mis Favoritos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/favorites">Favoritos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="logout()" style="cursor: pointer;">Cerrar sesión</a>
+            <a class="nav-link" href="#" (click)="cerrarSesion()">Cerrar sesión</a>
           </li>
         </ng-container>
-        
-        <ng-template #notLoggedIn>
+        <ng-template #sinSesion>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/login">Iniciar sesión</a>
+            <a class="nav-link" [routerLink]="['/login']">Iniciar sesión</a>
           </li>
         </ng-template>
       </ul>

@@ -1,15 +1,30 @@
-import { Component } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
-  templateUrl: '/nav.component.html',
-  //styleUrls: ['./nav.component.scss']
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss']
 })
-export class NavComponent {
-  constructor(public authService: AuthService) {}
+export class NavComponent implements OnInit {
+  sesion: any = null;
+  esAdmin: boolean = false;
+  esNormal: boolean = false;
 
-  logout() {
-    this.authService.logout();
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    const sesionStr = localStorage.getItem('sesion');
+    this.sesion = sesionStr ? JSON.parse(sesionStr) : null;
+    this.esAdmin = this.sesion?.logueado && this.sesion.tipo === 'admin';
+    this.esNormal = this.sesion?.logueado && this.sesion.tipo === 'normal';
+  }
+
+  cerrarSesion(): void {
+    localStorage.removeItem('sesion');
+    this.sesion = null;
+    this.esAdmin = false;
+    this.esNormal = false;
+    this.router.navigate(['/']);
   }
 }

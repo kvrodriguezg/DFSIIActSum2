@@ -34,7 +34,7 @@ export class LoginComponent {
 
     const logged = this.authService.login(email, password);
     if (logged) {
-      this.router.navigate(['/']);  // o la ruta deseada
+      this.router.navigate(['/']);
     } else {
       alert('Correo o contraseña incorrectos.');
     }
