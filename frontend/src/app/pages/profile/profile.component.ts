@@ -1,7 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { Router } from '@angular/router';
-
+/**
+ * Componente que representa el perfil del usuario,
+ * permite visualizar y actualizar sus datos personales.
+ *
+ * @export
+ * @class ProfileComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',

@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-
+/**
+ * Servicio de autenticación de usuarios.
+ * Gestiona el inicio y cierre de sesión, y la creación automática del usuario administrador.
+ *
+ * @export
+ */
 @Injectable({
   providedIn: 'root'
 })

@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-
+/**
+ * Servicio que permite gestionar recetas favoritas de los usuarios.
+ * Incluye funcionalidades para obtener, verificar y alternar favoritos usando `localStorage`.
+ *
+ * @export
+ * @class FavoritosService
+ */
 @Injectable({
   providedIn: 'root'
 })

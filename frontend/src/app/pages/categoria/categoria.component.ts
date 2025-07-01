@@ -4,6 +4,17 @@ import { Modal } from 'bootstrap';
 import { FavoritosService } from 'src/app/services/favoritos.service';
 import { RecetasService } from 'src/app/services/recetas.service';
 
+/**
+ * Componente que muestra una lista de recetas según
+ * la categoría seleccionada en la URL.
+ *
+ * Permite gestionar favoritos y mostrar detalles en un modal.
+ *
+ * @export
+ * @class CategoriaComponent
+ * @implements {OnInit, AfterViewInit}
+ */
+
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',

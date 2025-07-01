@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
-
+/**
+ * Componente para el registro de nuevos usuarios.
+ * Incluye validaciones personalizadas para el RUT, la edad mínima y la coincidencia de contraseñas.
+ *
+ * @export
+ * @class RegisterComponent
+ */
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

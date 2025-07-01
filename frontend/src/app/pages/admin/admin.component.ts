@@ -1,6 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+/**
+ * Componente que administra la gestión de usuarios en la aplicación.
+ * Permite listar, editar y eliminar usuarios almacenados en localStorage.
+ * Solo es accesible para usuarios con sesión de tipo 'admin'.
+ *
+ * @export
+ * @class AdminComponent
+ * @implements {OnInit}
+ */
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',

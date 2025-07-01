@@ -1,5 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
+/**
+ * Componente para mostrar una tarjeta de receta individual.
+ * Muestra información básica de la receta y permite acciones como ver detalles o marcar como favorita.
+ *
+ * @export
+ * @class RecetaCardComponent
+ */
 @Component({
   selector: 'app-receta-card',
   templateUrl: './receta-card.component.html',

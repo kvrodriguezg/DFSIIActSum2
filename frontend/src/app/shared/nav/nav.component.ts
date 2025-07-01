@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+/**
+ * Componente de navegación principal de la aplicación.
+ * Muestra enlaces condicionales según el tipo de usuario logueado (admin o normal),
+ * y permite cerrar la sesión del usuario actual.
+ *
+ * @export
+ * @class NavComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',

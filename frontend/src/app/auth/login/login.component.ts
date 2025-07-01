@@ -2,7 +2,13 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-
+/**
+ * Componente para el inicio de sesión de usuarios.
+ * Valida credenciales y redirige a la página principal si son correctas.
+ *
+ * @export
+ * @class LoginComponent
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

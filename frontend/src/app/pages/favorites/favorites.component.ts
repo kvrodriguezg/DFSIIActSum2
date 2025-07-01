@@ -4,6 +4,17 @@ import { Modal } from 'bootstrap';
 import { FavoritosService } from 'src/app/services/favoritos.service';
 import { RecetasService } from 'src/app/services/recetas.service';
 
+/**
+ * Componente que muestra las recetas favoritas del usuario normal.
+ * Permite visualizar las recetas favoritas filtradas según la sesión activa.
+ * Incluye la funcionalidad para abrir un modal con detalles de la receta seleccionada.
+ * Solo usuarios con sesión tipo 'normal' pueden acceder a esta vista.
+ *
+ * @export
+ * @class FavoritesComponent
+ * @implements {OnInit, AfterViewInit}
+ */
+
 @Component({
   selector: 'app-favorites',
   templateUrl: './favorites.component.html',

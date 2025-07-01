@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
-
+/**
+ * Componente para restablecer la contraseña de un usuario.
+ * Permite al usuario ingresar su correo y establecer una nueva contraseña.
+ *
+ * @export
+ * @class ResetPasswordComponent
+ */
 @Component({
   selector: 'app-reset-password',
   templateUrl: './reset-password.component.html',

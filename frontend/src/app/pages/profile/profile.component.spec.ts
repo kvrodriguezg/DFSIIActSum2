@@ -3,7 +3,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProfileComponent } from './profile.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-
+/**
+ * Pruebas unitarias para el componente {@link ProfileComponent}.
+ * 
+ * Verifica la correcta inicialización del formulario, comportamiento de validación
+ * y persistencia de datos en el almacenamiento local.
+ */
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
   let fixture: ComponentFixture<ProfileComponent>;
