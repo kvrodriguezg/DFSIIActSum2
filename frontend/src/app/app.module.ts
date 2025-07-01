@@ -13,9 +13,9 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { RecetaCardComponent } from './shared/receta-card/receta-card.component';
 import { CategoriaComponent } from './pages/categoria/categoria.component';
-
+import { FavoritesComponent } from './pages/favorites/favorites.component';
 @NgModule({
-  declarations: [HomeComponent, AppComponent, LoginComponent, NavComponent, ResetPasswordComponent, RegisterComponent, RecetaCardComponent, CategoriaComponent],
+  declarations: [FavoritesComponent, HomeComponent, AppComponent, LoginComponent, NavComponent, ResetPasswordComponent, RegisterComponent, RecetaCardComponent, CategoriaComponent],
   imports: [RouterModule, BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, CommonModule],
   providers: [],
   bootstrap: [AppComponent]

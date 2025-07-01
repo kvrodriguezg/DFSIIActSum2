@@ -7,6 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class RecetaCardComponent {
   @Input() receta: any;
+  @Input() mostrarFavorito: boolean = true;
   @Output() verDetalle = new EventEmitter<void>();
   @Output() toggleFavoritoClick = new EventEmitter<string>(); // ← Nuevo evento
 

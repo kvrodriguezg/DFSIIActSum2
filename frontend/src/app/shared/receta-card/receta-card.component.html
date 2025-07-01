@@ -3,7 +3,7 @@
   <h3>{{ receta.nombre }}</h3>
 
   <div class="d-flex justify-content-center gap-2 mt-2">
-    <button class="btn btn-warning btn-sm mb-2" (click)="toggleFavorito(receta.nombre)">
+    <button *ngIf="mostrarFavorito" class="btn btn-warning btn-sm mb-2" (click)="toggleFavorito(receta.nombre)">
       <i class="ti" [ngClass]="{
         'ti-star-filled': receta.esFavorita,
         'ti-star': !receta.esFavorita

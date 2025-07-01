@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'favorites', component: FavoritesComponent },
+  { path: 'favoritos', component: FavoritesComponent },
   { path: 'categoria/:tipo', component: CategoriaComponent },
   { path: '**', redirectTo: '' }
 ];
