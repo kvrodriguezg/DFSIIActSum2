@@ -14,8 +14,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { RecetaCardComponent } from './shared/receta-card/receta-card.component';
 import { CategoriaComponent } from './pages/categoria/categoria.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { AdminComponent } from './pages/admin/admin.component';
+
 @NgModule({
-  declarations: [FavoritesComponent, HomeComponent, AppComponent, LoginComponent, NavComponent, ResetPasswordComponent, RegisterComponent, RecetaCardComponent, CategoriaComponent],
+  declarations: [AdminComponent, ProfileComponent, FavoritesComponent, HomeComponent, AppComponent, LoginComponent, NavComponent, ResetPasswordComponent, RegisterComponent, RecetaCardComponent, CategoriaComponent],
   imports: [RouterModule, BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, CommonModule],
   providers: [],
   bootstrap: [AppComponent]

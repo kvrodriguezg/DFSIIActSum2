@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'mi-perfil', component: ProfileComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'favoritos', component: FavoritesComponent },
   { path: 'categoria/:tipo', component: CategoriaComponent },
